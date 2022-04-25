@@ -7,17 +7,19 @@ import { HashRouter as Router, Routes, Route} from "react-router-dom";
 import App from './App';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const routing = (
 	<Router>
-		<React.StrictMode>
+		<Routes>
 			<Header />
-			<Routes>
+
 				<Route path="/" element={<App/>} />
-			</Routes>
+
 			<Footer />
-		</React.StrictMode>
+		</Routes>
 	</Router>
+
 );
 
 ReactDOM.render(routing, document.getElementById('root'));
